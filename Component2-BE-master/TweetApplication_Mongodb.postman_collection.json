@@ -1,0 +1,451 @@
+{
+	"info": {
+		"_postman_id": "49266ec7-317d-4589-9cfb-dd44e094d518",
+		"name": "TweetApplication_Mongodb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\":\"greg\",\r\n    \"lastname\":\"ffgrd\",\r\n    \"email\":\"sdwsf@gmail.com\",\r\n    \"loginid\":\"grght\",\r\n    \"password\":\"sdfghjkl\",\r\n    \"contact\": 9863021475\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9511/api/v1/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9511",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9511/api/v1/user/getAllUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9511",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"getAllUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user details by loginid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9511/api/v1/user/harshi_jv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9511",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"harshi_jv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9511/api/v1/user/delete/grght",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9511",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"delete",
+						"grght"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post new tweet",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Access",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n    \"userLoginId\":\"hari_jv\",\r\n    \"message\":\"second tweet :(\",\r\n    \"likes\":5\r\n    \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9511/api/v1/tweet/postTweet/harshi_jv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9511",
+					"path": [
+						"api",
+						"v1",
+						"tweet",
+						"postTweet",
+						"harshi_jv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete tweet",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9511/api/v1/tweet/deleteTweet/26",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9511",
+					"path": [
+						"api",
+						"v1",
+						"tweet",
+						"deleteTweet",
+						"26"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all tweets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9511/api/v1/tweet/getAllTweets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9511",
+					"path": [
+						"api",
+						"v1",
+						"tweet",
+						"getAllTweets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get particular user tweets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9511/api/v1/tweet/grght",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9511",
+					"path": [
+						"api",
+						"v1",
+						"tweet",
+						"grght"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit tweet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"likes\":10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9511/api/v1/tweet/editTweet/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9511",
+					"path": [
+						"api",
+						"v1",
+						"tweet",
+						"editTweet",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get tweet by tweetid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9511/api/v1/tweet/getTweet/35",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9511",
+					"path": [
+						"api",
+						"v1",
+						"tweet",
+						"getTweet",
+						"35"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update like",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9511/api/v1/tweet/like/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9511",
+					"path": [
+						"api",
+						"v1",
+						"tweet",
+						"like",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post reply",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userLoginId\":\"harshi_jv\",\r\n    \"comment\":\"my first comment for this tweet\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9511/api/v1/reply/postReply/47",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9511",
+					"path": [
+						"api",
+						"v1",
+						"reply",
+						"postReply",
+						"47"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get reply by tweet id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9511/api/v1/reply/47",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9511",
+					"path": [
+						"api",
+						"v1",
+						"reply",
+						"47"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllReplies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9511/api/v1/reply/getAllReplies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9511",
+					"path": [
+						"api",
+						"v1",
+						"reply",
+						"getAllReplies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete reply by replyId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9511/api/v1/reply/deleteReply/25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9511",
+					"path": [
+						"api",
+						"v1",
+						"reply",
+						"deleteReply",
+						"25"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAllReplies",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9511/api/v1/reply/deleteAllReplies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9511",
+					"path": [
+						"api",
+						"v1",
+						"reply",
+						"deleteAllReplies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/kafka/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\":\"nmjkb\",\r\n    \"lastname\":\"bh\",\r\n    \"email\":\"sbgvd@gmail.com\",\r\n    \"loginid\":\"vbgh\",\r\n    \"password\":\"xyasdc\",\r\n    \"contact\": 9863021475\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/kafka/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"kafka",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
